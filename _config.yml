@@ -1,7 +1,7 @@
 remote_theme: LeNPaul/portfolio-jekyll-theme
 
 title: Koji Johnson
-description: Your personal portfolio
+description: This is a blog showing my progress with the 3rd version of my affordable Prosthetic Arm project. I will include links and lines of code for those who want to make designs similar to this at home themselves.
 
 plugins:
   - jekyll-remote-theme
