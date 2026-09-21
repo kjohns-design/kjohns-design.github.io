@@ -1,1 +1,7 @@
+remote_theme: LeNPaul/portfolio-jekyll-theme
 
+title: Your Name
+description: Your personal portfolio
+
+plugins:
+  - jekyll-remote-theme
