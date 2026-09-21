@@ -1,0 +1,11 @@
+I first began by creating a new design for the CAD. This new design would have looser joints, a new design for the thumb piece that would use a large cylinder to attach it to the hand, have moving parts for the ring finger and pinky(inspired by this design: https://www.youtube.com/watch?v=vgtJY_rJWzo&pp=ygUXM2QgcHJpbnRlZCByb2JvdGljIGhhbmQ%3D), and have holes I can pass the elastic strings through, so that I don't have to glue them to the hand anymore.
+
+Next, I ordered more pressure sensors, another ADS1115 to connect the sensors, and high-torque servos.
+
+Finally, I cut the wrist and shortened it to around only 5 inches in height.
+
+My goals for next week are:
+- Print the new version of the hand
+- Attach the high-torque servos
+- Order more jumper cables and create a plan for how to attach them to the hand
+- Secure the servos using screws
