@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Version 2 of the arm"
+---
+
+# Introduction for Version 2
+When I was working on the first version of the project, I thought I wouldn't take this project too serious, and just make a hand that moved fine, and would do nothing else; after being obsessed with the project, I decided I wanted to take it to the next level during the summer. 
+
+## Progress
+I first redesigned my hand by doing the following: Adding a thumb piece to my hand, making the hand much smaller, printing the 3-layer design all at once rather than as separate parts, adding holes to the hand to let the fishing line pass through it and the fingers, and using elastic string instead of rubber bands.
+This is the new design I made for the hand:
+![Prosthetic Arm](../assets/img/IMG_5200.HEIC)
+I assembled the hand using filament for the joints, which would work extremely well:
+![Prosthetic Arm](../assets/img/IMG_5257.HEIC)
+![Prosthetic Arm](../assets/img/IMG_5199.HEIC)
+However, I accidentally printed the holes for the elastic string too small, so i decided to drill the fingers to fit them. However, I then realized the elastic wasn't strong enough, so I added two more hot glued to each finger and the hand.
+I then came up the idea for electronic parts of the hand, as I wanted my hand to be different from those made by others; I used pressure sensors instead of EMG sensors to control the hand movements and created an artificial pain system. This artificial pain system would use an MPU6050 accelerometer to detect too-quick movement and strain gauges to detect high strain on the pipes.:
+![Prosthetic Arm](../assets/img/IMG_5258.HEIC)
+I assembled all of the electronics on a breadboard after soldering the headers of certain parts.
+
+Next, I figured out how to move the arm and wrist, which meant designing a wrist part that can spin around the wrist pipe and designing gears to control the up-and-down movements for the arm and wrist.
+![Prosthetic Arm](../assets/img/IMG_5429.HEIC)
+![Prosthetic Arm](../assets/img/IMG_5430.HEIC)
+
+Finally, I programmed the following code pasted in the Google Docs to detect pressure and move fingers based on the pressure, as well as program it to show a warning when it detects too high a strain/acceleration:
+
+## Parts added:
+Jumper wires(female)
+Header pins
+ADS1115
+HX711
+LED
+Breadboard
+Filament
+MPU 6050
+Strain gauges
+Pressure sensors
