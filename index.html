@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Koji Johnson — Prosthetic Arm Engineering Log</title>
+<meta name="description" content="An open engineering journal documenting an affordable, 3D-printed, Raspberry Pi–driven prosthetic arm — built across three versions, in public." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div>
+      <a href="#top" class="brand">Koji <span>/</span> Johnson</a>
+      <div class="brand-role">Prosthetic Arm Engineering Log</div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5H16M2 9H16M2 13.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#top">Overview</a>
+        <a href="#timeline">Build Timeline</a>
+        <a href="#stack">Parts &amp; Tools</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener">Repo ↗</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-foot">
+      Built &amp; documented by Koji Johnson.<br />
+      Open source on
+      <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener">GitHub</a>.
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="top" class="hero-section">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">// affordable prosthetics · open source</p>
+          <h1>Building a prosthetic arm that costs a fraction of the ones on the market.</h1>
+          <p class="lede">
+            A weekly-updated engineering log tracking every version of a 3D-printed,
+            Raspberry Pi–driven prosthetic hand — from a galvanized-pipe skeleton and
+            fishing-line tendons to pressure-sensor control and an onboard strain-warning system.
+          </p>
+          <div class="hero-actions">
+            <a href="#timeline" class="btn primary">Read the build log</a>
+            <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener" class="btn">View source on GitHub</a>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><b>V3</b><span>current version</span></div>
+            <div class="stat"><b>Oct 2025</b><span>project started</span></div>
+            <div class="stat"><b>Pi 4</b><span>onboard compute</span></div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/img/IMG_6779.jpeg" alt="Assembled Version 3 arm with servo-driven finger joints and 3D-printed hand" loading="lazy" />
+          <span class="tag">Version 3 — arm &amp; hand assembly</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">// build timeline</p>
+          <h2>Three versions, in public</h2>
+          <p>Every iteration, mistake, and fix — newest first.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="rail" aria-hidden="true"></div>
+
+          <!-- WEEK 1 -->
+          <article class="entry" data-v="3">
+            <div class="node">V3</div>
+            <div class="entry-date">Sept 21, 2026 — Week 1</div>
+            <h3>Redesigning the CAD for looser joints</h3>
+            <p>
+              I began by redesigning the CAD to fix the problems from the Version 3 intro:
+              looser joints, a new thumb piece built around a large cylinder for the
+              attachment point, moving parts for the ring finger and pinky
+              (<a href="https://www.youtube.com/watch?v=vgtJY_rJWzo" target="_blank" rel="noopener" style="color:var(--teal)">inspired by this 3D-printed robotic hand</a>),
+              and holes to route elastic string through so nothing needs to be glued on anymore.
+            </p>
+            <div class="shots">
+              <img src="assets/img/Screenshot3.png" alt="CAD render of the redesigned arm segment, side view" loading="lazy" />
+              <img src="assets/img/Screenshot4.png" alt="CAD render close-up of the finger joint hinge mechanism" loading="lazy" />
+            </div>
+            <p>
+              I also ordered more pressure sensors, a second ADS1115 to read them, and
+              higher-torque servos, then cut the wrist down to about five inches to stop
+              it from being so failure-prone.
+            </p>
+            <div class="goals">
+              <h4>Goals for next week</h4>
+              <ul>
+                <li>Print the new version of the hand</li>
+                <li>Attach the high-torque servos</li>
+                <li>Order more jumper cables and plan how to route them to the hand</li>
+                <li>Secure the servos with screws instead of glue</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- INTRO V3 -->
+          <article class="entry" data-v="3">
+            <div class="node">V3</div>
+            <div class="entry-date">Sept 21, 2026 — Introduction</div>
+            <h3>What's wrong with Version 3</h3>
+            <p>
+              Version 3 moved, but not well. The joints were designed too tight, so the
+              hand didn't always close. The servos were too weak for the arm and wrist and
+              snapped off. The wrist was too long, which made the whole thing fragile.
+              And everything was hot-glued or superglued together — low durability, and it
+              looked exactly like that.
+            </p>
+            <div class="goals">
+              <h4>Goals for this version</h4>
+              <ul>
+                <li>Create looser joints</li>
+                <li>Fit the electronics onto the hand itself</li>
+                <li>Secure parts without relying on glue</li>
+                <li>Make an arm that actually looks finished</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- VERSION 2 -->
+          <article class="entry" data-v="2">
+            <div class="node">V2</div>
+            <div class="entry-date">May 9, 2026 — Version 2</div>
+            <h3>Taking it seriously</h3>
+            <p>
+              With Version 1 I wasn't trying too hard — just get a hand that moves. After
+              getting obsessed with the project, I decided to take it further over the
+              summer: a redesigned hand with a real thumb piece, printed as one three-layer
+              part instead of separate pieces, with holes for fishing line and elastic
+              string instead of rubber bands.
+            </p>
+            <p>
+              I assembled the hand using filament for the joints, which worked far better
+              than glue. The elastic-string holes came out too small, so I drilled the
+              fingers to fit — then found the elastic wasn't strong enough alone, so I
+              hot-glued two more strands to each finger.
+            </p>
+            <p>
+              For electronics, I wanted something different from typical EMG-controlled
+              builds, so I used pressure sensors instead — plus an MPU6050 accelerometer
+              and strain gauges to build an artificial pain system that flags movements
+              that are too fast or too much strain on the pipes. Everything got soldered
+              and assembled onto a breadboard.
+            </p>
+            <div class="shots">
+              <img src="assets/img/IMG_6783.jpeg" alt="Breadboard wiring for the ADS1115, pressure sensors, MPU6050, and battery pack" loading="lazy" />
+            </div>
+            <p>
+              Getting the arm and wrist to move meant designing a wrist piece that spins
+              around the wrist pipe, plus gears for up-and-down motion at both joints.
+            </p>
+            <div class="shots">
+              <img src="assets/img/IMG_6779.jpeg" alt="Assembled arm segment with servo-driven gears at the wrist and elbow joints" loading="lazy" />
+            </div>
+            <p>
+              Finally, I wrote the control code to read pressure and move fingers
+              accordingly, with a warning trigger for excess strain or acceleration.
+            </p>
+            <div class="parts">
+              <h4>Parts added this version</h4>
+              <div class="chips">
+                <span class="chip">Jumper wires (female)</span>
+                <span class="chip">Header pins</span>
+                <span class="chip">ADS1115</span>
+                <span class="chip">HX711</span>
+                <span class="chip">LED</span>
+                <span class="chip">Breadboard</span>
+                <span class="chip">Filament</span>
+                <span class="chip">MPU6050</span>
+                <span class="chip">Strain gauges</span>
+                <span class="chip">Pressure sensors</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VERSION 1 -->
+          <article class="entry" data-v="1">
+            <div class="node">V1</div>
+            <div class="entry-date">Oct 9, 2025 — Version 1</div>
+            <h3>Where it started</h3>
+            <p>
+              This project began as an Independent Study assignment for English class —
+              pick a project, work on it for a few months, present it in April. I wanted
+              to build something engineering-related that could actually help people, so
+              I decided to build an affordable prosthetic arm using inexpensive
+              electronics, 3D-printed parts, and materials I could easily get.
+            </p>
+            <p>
+              I started by researching how current prosthetics work, how ancient
+              structures like the Pantheon stayed standing for so long (for finger
+              design), what prosthetics typically cost, and which materials would work.
+              From there I sketched a prototype, then built a skeleton out of galvanized
+              steel pipes, nuts, and bolts.
+            </p>
+            <p>
+              I then modeled it properly in CAD, adding a rib and an outer casing layer —
+              a nod to the Pantheon — for extra strength
+              (<a href="https://cad.onshape.com/documents/258d3cbd698c0f8604d83615/w/486af257ee52051d6e414d3b/e/57aca099e1616bd1490ee5bb" target="_blank" rel="noopener" style="color:var(--teal)">Onshape design here</a>).
+              After printing it, my first attempt at the joints used nails, which cracked
+              the parts — so I switched to gluing them together with rubber bands instead.
+            </p>
+            <p>
+              Finally, I wired a PCA9685 servo driver to a Raspberry Pi 4, programmed it
+              in Thonny, and attached the hand to the arm. I put together a presentation
+              on the whole build to wrap up the version.
+            </p>
+            <div class="parts">
+              <h4>Parts used</h4>
+              <div class="chips">
+                <span class="chip">Fishing line</span>
+                <span class="chip">PCA9685 servo driver</span>
+                <span class="chip">Straws</span>
+                <span class="chip">Hot glue</span>
+                <span class="chip">Nylon bushings</span>
+                <span class="chip">Nuts &amp; bolts</span>
+                <span class="chip">Raspberry Pi 4</span>
+                <span class="chip">Batteries + holder</span>
+                <span class="chip">Mini servos</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">// what it's built from</p>
+          <h2>Parts &amp; tools, across all versions</h2>
+          <p>Everything used so far to get from a sketch to a working hand.</p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h4>Compute &amp; control</h4>
+            <ul>
+              <li>Raspberry Pi 4</li>
+              <li>PCA9685 servo driver</li>
+              <li>ADS1115 (×2)</li>
+              <li>HX711</li>
+              <li>MPU6050 accelerometer</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>Sensing</h4>
+            <ul>
+              <li>Pressure sensors</li>
+              <li>Strain gauges</li>
+              <li>ECG-style electrodes</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>Mechanical</h4>
+            <ul>
+              <li>3D-printed joints &amp; housing</li>
+              <li>Galvanized steel pipe skeleton</li>
+              <li>Mini &amp; high-torque servos</li>
+              <li>Fishing line / elastic string tendons</li>
+              <li>Filament-pinned joints</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-body">
+        <div class="section-head">
+          <p class="eyebrow">// about the project</p>
+          <h2>Why this exists</h2>
+          <p></p>
+        </div>
+        <p>
+          This project started as a school assignment and turned into an ongoing build:
+          an affordable, repairable prosthetic arm made from 3D-printed parts, off-the-shelf
+          electronics, and open designs — documented here so anyone else who wants to build
+          something similar can follow along, reuse the code, and skip a few of the mistakes.
+        </p>
+
+        <div class="contact-box">
+          <div>
+            <h3>Follow the build</h3>
+            <p>Code, CAD links, and every write-up live in the GitHub repo.</p>
+          </div>
+          <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener" class="btn primary">Open the repo</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Koji Johnson</span>
+      <span>Prosthetic Arm Engineering Log</span>
+    </footer>
+
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
