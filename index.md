@@ -1,5 +1,6 @@
 ---
-layout: home
+layout: page
+title: My Prosthetic Arm Project
 ---
 
 # My Prosthetic Arm Project
@@ -14,5 +15,3 @@ This website documents my progress building an affordable prosthetic arm.
 {{ post.excerpt }}
 
 {% endfor %}
-
-
