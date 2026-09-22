@@ -421,6 +421,19 @@ section { padding: 96px 48px; }
 .shots figure { display: flex; align-items: center; justify-content: center; }
 .shots figure img { aspect-ratio: auto; height: 100%; }
 
+.entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.entry-link:hover { border-bottom-color: var(--teal); }
+
 .note {
   font-family: var(--mono);
   font-size: 12px;
