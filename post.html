@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.summary | default: site.description | strip_html | escape }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/post.css' | relative_url }}" />
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="sidebar" id="sidebar">
+    <div>
+      <a href="{{ '/' | relative_url }}" class="brand">Koji <span>/</span> Johnson</a>
+      <div class="brand-role">Prosthetic Arm Engineering Log</div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5H16M2 9H16M2 13.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="{{ '/#top' | relative_url }}">Overview</a>
+        <a href="{{ '/#timeline' | relative_url }}" class="active">Build Timeline</a>
+        <a href="{{ '/#stack' | relative_url }}">Parts &amp; Tools</a>
+        <a href="{{ '/#about' | relative_url }}">About</a>
+        <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener">Repo ↗</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-foot">
+      Built &amp; documented by Koji Johnson.<br />
+      Open source on
+      <a href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener">GitHub</a>.
+    </div>
+  </aside>
+
+  <main>
+    <section class="post">
+      <div class="wrap">
+
+        <a class="back" href="{{ '/#timeline' | relative_url }}">← Back to the build timeline</a>
+
+        <header class="post-head">
+          <div class="post-meta">
+            {% if page.version %}<span class="vbadge" data-v="{{ page.version }}">V{{ page.version }}</span>{% endif %}
+            <span class="eyebrow">// {{ page.label | default: "Log entry" }} · {{ page.date | date: "%b %-d, %Y" }}</span>
+          </div>
+          <h1>{{ page.title }}</h1>
+          {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+        </header>
+
+        <div class="post-body">
+          {{ content }}
+        </div>
+
+        <div class="post-foot">
+          <a class="entry-link" href="{{ '/#timeline' | relative_url }}">← All entries</a>
+          <a class="entry-link" href="https://github.com/kjohns-design/kjohns-design.github.io" target="_blank" rel="noopener">View source on GitHub ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Koji Johnson</span>
+      <span>Prosthetic Arm Engineering Log</span>
+    </footer>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>
