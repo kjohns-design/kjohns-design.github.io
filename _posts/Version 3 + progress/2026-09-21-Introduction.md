@@ -1,13 +1,28 @@
 ---
 layout: post
-title: "Introduction for Version 3"
 date: 2026-09-21
+title: "Introduction for Version 3"
+label: "Version 3"
+version: 3
+summary: "What worked, what didn't, and what I want to fix in the next version."
 ---
 
-Though I am satisfied with how version 3 worked, I have multiple issues with the design. First, I designed the joints too tightly, which was causing the hand to not close at times. Next, the servos were too weak to move the arm and wrist, so they snapped off. The wrist is also too long, which I fear may cause it to fall apart easily. The third, and main reason, is that its looks are not the best; the parts are hotglued/superglued, and therefore have low durability, and the glue also makes the design less aesthetically appealing. I also cannot yet attach the breadboard, Pi, and other electrical components, as the bread board and PI are too big to fit on the arm, as well as the jummpers being too short for me to attach the pressure sensors on my body yet
-My goals are to:
-- Create looser joints
-- Be able to attach the electrical components on my hand
-- Secure the parts without using glue
-- Create an aesthetically pleasing arm
+Though I'm satisfied with how Version 3 worked, I have several issues with the design.
 
+## What's wrong with Version 3
+
+- **The joints are too tight.** I designed them too tightly, so the hand didn't always close.
+- **The servos are too weak.** They couldn't move the arm and wrist, and they snapped off.
+- **The wrist is too long.** I'm afraid it will fall apart easily.
+- **It doesn't look good.** The parts are hot-glued or superglued, so they have low durability, and the glue also makes the design less appealing. This is the main reason I want a new version.
+- **The electronics don't fit yet.** The breadboard and Pi are too big to fit on the arm, and the jumper wires are too short to attach the pressure sensors to my body.
+
+<div class="goals">
+  <h4>Goals for this version</h4>
+  <ul>
+    <li>Create looser joints</li>
+    <li>Be able to attach the electrical components on the hand</li>
+    <li>Secure the parts without using glue</li>
+    <li>Create an aesthetically pleasing arm</li>
+  </ul>
+</div>
